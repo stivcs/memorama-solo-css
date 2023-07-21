@@ -1,0 +1,481 @@
+/* animacion que mueve el z-index de los botones de start */
+@keyframes changeOrder {
+    from {
+      z-index: 6;
+    }
+    to {
+      z-index: 1;
+    }
+  }
+
+/* animacion que permite que al darle al boton sea aleatorio */
+
+label:nth-of-type(1) {
+    animation-delay: 0s;
+}
+label:nth-of-type(2) {
+    animation-delay: -0.5s;
+}
+label:nth-of-type(3) {
+    animation-delay: -1s;
+}
+label:nth-of-type(4) {
+    animation-delay: -1.5s;
+}
+label:nth-of-type(5) {
+    animation-delay: -2s;
+}
+label:nth-of-type(6) {
+    animation-delay: -2.5s;
+} 
+
+/*posibilidad del dado */
+/* dado 1 */
+#d1:checked ~ .Contenido main label:nth-of-type(12) {order: 4;}
+#d1:checked ~ .Contenido main label:nth-of-type(11) {order: 14;}
+#d1:checked ~ .Contenido main label:nth-of-type(10) {order: 1;}
+#d1:checked ~ .Contenido main label:nth-of-type(9) {order: 13;}
+#d1:checked ~ .Contenido main label:nth-of-type(8) {order: 2;}
+#d1:checked ~ .Contenido main label:nth-of-type(7) {order: 12;}
+#d1:checked ~ .Contenido main label:nth-of-type(6) {order: 3;}
+#d1:checked ~ .Contenido main label:nth-of-type(5) {order: 11;}
+#d1:checked ~ .Contenido main label:nth-of-type(4) {order: 5;}
+#d1:checked ~ .Contenido main label:nth-of-type(3) {order: 15;}
+#d1:checked ~ .Contenido main label:nth-of-type(2) {order: 6;}
+#d1:checked ~ .Contenido main label:nth-of-type(1) {order: 16;}
+#d1:checked ~ .Contenido main label:nth-of-type(13) {order: 15;}
+#d1:checked ~ .Contenido main label:nth-of-type(14) {order: 8;}
+#d1:checked ~ .Contenido main label:nth-of-type(15) {order: 7;}
+#d1:checked ~ .Contenido main label:nth-of-type(16) {order: 9;}
+
+/* dado 2 */
+
+#d2:checked ~ .Contenido main label:nth-of-type(12) {order: 9;}
+#d2:checked ~ .Contenido main label:nth-of-type(11) {order: 7;}
+#d2:checked ~ .Contenido main label:nth-of-type(10) {order: 10;}
+#d2:checked ~ .Contenido main label:nth-of-type(9) {order: 8;}
+#d2:checked ~ .Contenido main label:nth-of-type(8) {order: 5;}
+#d2:checked ~ .Contenido main label:nth-of-type(7) {order: 13;}
+#d2:checked ~ .Contenido main label:nth-of-type(6) {order: 6;}
+#d2:checked ~ .Contenido main label:nth-of-type(5) {order: 14;}
+#d2:checked ~ .Contenido main label:nth-of-type(4) {order: 1;}
+#d2:checked ~ .Contenido main label:nth-of-type(3) {order: 11;}
+#d2:checked ~ .Contenido main label:nth-of-type(2) {order: 2;}
+#d2:checked ~ .Contenido main label:nth-of-type(1) {order: 12;}
+#d2:checked ~ .Contenido main label:nth-of-type(13) {order: 3;}
+#d2:checked ~ .Contenido main label:nth-of-type(14) {order: 16;}
+#d2:checked ~ .Contenido main label:nth-of-type(15) {order: 4;}
+#d2:checked ~ .Contenido main label:nth-of-type(16) {order: 15;}
+
+/* dado 3 */
+
+#d3:checked ~ .Contenido main label:nth-of-type(12) {order: 8;}
+#d3:checked ~ .Contenido main label:nth-of-type(11) {order: 10;}
+#d3:checked ~ .Contenido main label:nth-of-type(10) {order: 7;}
+#d3:checked ~ .Contenido main label:nth-of-type(9) {order: 9;}
+#d3:checked ~ .Contenido main label:nth-of-type(8) {order: 4;}
+#d3:checked ~ .Contenido main label:nth-of-type(7) {order: 16;}
+#d3:checked ~ .Contenido main label:nth-of-type(6) {order: 5;}
+#d3:checked ~ .Contenido main label:nth-of-type(5) {order: 15;}
+#d3:checked ~ .Contenido main label:nth-of-type(4) {order: 2;}
+#d3:checked ~ .Contenido main label:nth-of-type(3) {order: 12;}
+#d3:checked ~ .Contenido main label:nth-of-type(2) {order: 3;}
+#d3:checked ~ .Contenido main label:nth-of-type(1) {order: 13;}
+#d3:checked ~ .Contenido main label:nth-of-type(13) {order: 1;}
+#d3:checked ~ .Contenido main label:nth-of-type(14) {order: 14;}
+#d3:checked ~ .Contenido main label:nth-of-type(15) {order: 6;}
+#d3:checked ~ .Contenido main label:nth-of-type(16) {order: 11;}
+
+/* dado 3 */
+
+#d4:checked ~ .Contenido main label:nth-of-type(12) {order: 1;}
+#d4:checked ~ .Contenido main label:nth-of-type(11) {order: 11;}
+#d4:checked ~ .Contenido main label:nth-of-type(10) {order: 12;}
+#d4:checked ~ .Contenido main label:nth-of-type(9) {order: 18;}
+#d4:checked ~ .Contenido main label:nth-of-type(8) {order: 15;}
+#d4:checked ~ .Contenido main label:nth-of-type(7) {order: 4;}
+#d4:checked ~ .Contenido main label:nth-of-type(6) {order: 14;}
+#d4:checked ~ .Contenido main label:nth-of-type(5) {order: 7;}
+#d4:checked ~ .Contenido main label:nth-of-type(4) {order: 10;}
+#d4:checked ~ .Contenido main label:nth-of-type(3) {order: 2;}
+#d4:checked ~ .Contenido main label:nth-of-type(2) {order: 16;}
+#d4:checked ~ .Contenido main label:nth-of-type(1) {order: 6;}
+#d4:checked ~ .Contenido main label:nth-of-type(13) {order: 13;}
+#d4:checked ~ .Contenido main label:nth-of-type(14) {order: 3;}
+#d4:checked ~ .Contenido main label:nth-of-type(15) {order: 9;}
+#d4:checked ~ .Contenido main label:nth-of-type(16) {order: 6;}
+
+/* dado 4 */
+
+#d5:checked ~ .Contenido main label:nth-of-type(12) {order: 10;}
+#d5:checked ~ .Contenido main label:nth-of-type(11) {order: 8;}
+#d5:checked ~ .Contenido main label:nth-of-type(10) {order: 11;}
+#d5:checked ~ .Contenido main label:nth-of-type(9) {order: 9;}
+#d5:checked ~ .Contenido main label:nth-of-type(8) {order: 3;}
+#d5:checked ~ .Contenido main label:nth-of-type(7) {order: 15;}
+#d5:checked ~ .Contenido main label:nth-of-type(6) {order: 4;}
+#d5:checked ~ .Contenido main label:nth-of-type(5) {order: 14;}
+#d5:checked ~ .Contenido main label:nth-of-type(4) {order: 2;}
+#d5:checked ~ .Contenido main label:nth-of-type(3) {order: 12;}
+#d5:checked ~ .Contenido main label:nth-of-type(2) {order: 1;}
+#d5:checked ~ .Contenido main label:nth-of-type(1) {order: 13;}
+#d5:checked ~ .Contenido main label:nth-of-type(13) {order: 5;}
+#d5:checked ~ .Contenido main label:nth-of-type(14) {order: 16;}
+#d5:checked ~ .Contenido main label:nth-of-type(15) {order: 6;}
+#d5:checked ~ .Contenido main label:nth-of-type(16) {order: 7;}
+
+/* dado 5 */
+
+#d6:checked ~ .Contenido main label:nth-of-type(12) {order: 9;}
+#d6:checked ~ .Contenido main label:nth-of-type(11) {order: 10;}
+#d6:checked ~ .Contenido main label:nth-of-type(10) {order: 8;}
+#d6:checked ~ .Contenido main label:nth-of-type(9) {order: 11;}
+#d6:checked ~ .Contenido main label:nth-of-type(8) {order: 2;}
+#d6:checked ~ .Contenido main label:nth-of-type(7) {order: 14;}
+#d6:checked ~ .Contenido main label:nth-of-type(6) {order: 3;}
+#d6:checked ~ .Contenido main label:nth-of-type(5) {order: 13;}
+#d6:checked ~ .Contenido main label:nth-of-type(4) {order: 1;}
+#d6:checked ~ .Contenido main label:nth-of-type(3) {order: 15;}
+#d6:checked ~ .Contenido main label:nth-of-type(2) {order: 4;}
+#d6:checked ~ .Contenido main label:nth-of-type(1) {order: 16;}
+#d6:checked ~ .Contenido main label:nth-of-type(13) {order: 6;}
+#d6:checked ~ .Contenido main label:nth-of-type(14) {order: 7;}
+#d6:checked ~ .Contenido main label:nth-of-type(15) {order: 5;}
+#d6:checked ~ .Contenido main label:nth-of-type(16) {order: 12;}
+
+
+
+/* style del boton que genera aleatoriedad */
+
+.label-dice {
+    animation: changeOrder 6s infinite linear;
+    background: #e80505;
+    color: white;
+    border-radius: 5%;
+    box-shadow: 0 0 10px rgba(1, 124, 255, 0.79);
+    cursor: pointer;
+    display: block;
+    padding: 1rem;
+    user-select: none;
+    position: absolute;
+    /* center it self*/
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.label-dice:hover {
+    color: rgb(5, 5, 5);
+}
+  
+/* style de la pagina en general */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: url(imagenes/valoFondo2.jpg) center center/ cover;
+    --ancho : 125px;
+    --alto : 195px;
+    
+}
+.Header {
+    /* background-color: rgb(195, 0, 255); */
+    background: url(imagenes/fondoHeader.jpg) center;
+    color: white;
+    display: flex;
+    box-shadow: 0 10px 10px rgb(255, 21, 21);
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    border-color: rgb(255, 255, 255);
+    border-bottom: 2px;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-style: solid;
+    font-family: 'Caveat', cursive;
+}
+.Contenido {
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    max-width: min-content;
+    display: none;
+    padding: 0;
+    margin: 0;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 10px;
+    align-items: center;
+
+}
+
+#Img {
+    width: var(--ancho);
+    height: var(--alto);
+}
+
+.FlipCard {
+    background-color: transparent;
+    width: var(--ancho);
+    height: var(--alto);
+    border: 1px solid #e100ff8e;
+    perspective: 1000px;
+}
+
+.FlipCardInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.5s ease-in-out;
+    transform-style: preserve-3d;
+    cursor: pointer; 
+}
+
+.CardFront,
+.CardBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+.CardFront img,
+.CardBack img {
+    width: 100%;
+    height: 100%;
+}
+.CardBack {
+    transform: rotateY(180deg);
+}
+/* oculta los checkbox y los radio del programa */
+input[type="checkbox"],
+input[type="radio"] {
+    display: none;
+  }
+
+main label {
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+.ContentAlerta {
+    display: none;
+    background-color: rgba(34, 34, 34, 0.498);
+    color: rgb(214, 59, 59);
+    border-radius: 5px;
+    position: absolute;
+    z-index: 10;
+    top: 9%;
+    font-size: 8px;
+    padding-left: 5px; padding-right: 5px;
+    pointer-events: none;
+}
+/* style del modal de ganaste */
+.Ganaste {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    background-color: #950000;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.2),
+      0 0 10px rgba(0, 0, 0, 0.1);
+
+  }
+
+  .ContenedorModal {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0; left: 0;
+    background-color: rgba(144, 148, 150, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
+  .Ganaste h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .Ganaste button {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: flex;
+    background-color: #cc00ff;
+    color: white;
+    box-shadow: 0 0 10px rgba(111, 0, 255, 0.716);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .Ganaste a {
+    text-decoration: none;
+    color: white;
+  }
+  .Ganaste a button:hover {
+    color: aqua;
+    background-color: #8800aa;
+  }
+
+/* check para voltear las cartas */
+
+#Card1:checked ~ .FlipCardSelect1 .FlipCardInner,
+#Card2:checked ~ .FlipCardSelect2 .FlipCardInner,
+#Card3:checked ~ .FlipCardSelect3 .FlipCardInner,
+#Card4:checked ~ .FlipCardSelect4 .FlipCardInner,
+#Card5:checked ~ .FlipCardSelect5 .FlipCardInner,
+#Card6:checked ~ .FlipCardSelect6 .FlipCardInner,
+#Card7:checked ~ .FlipCardSelect7 .FlipCardInner,
+#Card8:checked ~ .FlipCardSelect8 .FlipCardInner,
+#Card12:checked ~ .FlipCardSelect12 .FlipCardInner,
+#Card22:checked ~ .FlipCardSelect22 .FlipCardInner,
+#Card32:checked ~ .FlipCardSelect32 .FlipCardInner,
+#Card42:checked ~ .FlipCardSelect42 .FlipCardInner,
+#Card52:checked ~ .FlipCardSelect52 .FlipCardInner,
+#Card62:checked ~ .FlipCardSelect62 .FlipCardInner,
+#Card72:checked ~ .FlipCardSelect72 .FlipCardInner,
+#Card82:checked ~ .FlipCardSelect82 .FlipCardInner {
+    transform: rotateY(180deg);
+  }
+
+/* lo que evita que una vez seleccionada la pareja correcta se puede volver a voltear */
+
+
+#Card1:checked + #Card12:checked ~ .FlipCardSelect1,
+#Card1:checked + #Card12:checked ~ .FlipCardSelect12,
+#Card2:checked + #Card22:checked ~ .FlipCardSelect2,
+#Card2:checked + #Card22:checked ~ .FlipCardSelect22,
+#Card3:checked + #Card32:checked ~ .FlipCardSelect3,
+#Card3:checked + #Card32:checked ~ .FlipCardSelect32,
+#Card4:checked + #Card42:checked ~ .FlipCardSelect4,
+#Card4:checked + #Card42:checked ~ .FlipCardSelect42,
+#Card5:checked + #Card52:checked ~ .FlipCardSelect5,
+#Card5:checked + #Card52:checked ~ .FlipCardSelect52,
+#Card6:checked + #Card62:checked ~ .FlipCardSelect6,
+#Card6:checked + #Card62:checked ~ .FlipCardSelect62,
+#Card7:checked + #Card72:checked ~ .FlipCardSelect7,
+#Card7:checked + #Card72:checked ~ .FlipCardSelect72,
+#Card8:checked + #Card82:checked ~ .FlipCardSelect8,
+#Card8:checked + #Card82:checked ~ .FlipCardSelect82 {
+    pointer-events: none;
+}
+
+/* mira que todas las cartas estan checkiadas */
+
+#Card1:checked
+    ~ #Card12:checked
+    ~ #Card2:checked
+    ~ #Card22:checked
+    ~ #Card3:checked
+    ~ #Card32:checked
+    ~ #Card4:checked
+    ~ #Card42:checked
+    ~ #Card5:checked
+    ~ #Card52:checked
+    ~ #Card6:checked
+    ~ #Card62:checked
+    ~ #Card7:checked
+    ~ #Card72:checked
+    ~ #Card8:checked
+    ~ #Card82:checked
+  ~ .ContenedorModal {
+    display: flex;
+}
+
+#d1:checked ~ .label-dice,
+#d2:checked ~ .label-dice,
+#d3:checked ~ .label-dice,
+#d4:checked ~ .label-dice,
+#d5:checked ~ .label-dice,
+#d6:checked ~ .label-dice {
+    display: none;
+}
+
+#d1:checked ~ .Contenido main,
+#d2:checked ~ .Contenido main,
+#d3:checked ~ .Contenido main,
+#d4:checked ~ .Contenido main,
+#d5:checked ~ .Contenido main,
+#d6:checked ~ .Contenido main {
+    display: grid;
+}
+
+@media screen and (max-width: 1360px){
+    body {
+        --ancho:100px;
+        --alto:140px; 
+    }
+}
+@media screen and (max-width: 1024px){
+    body {
+        --ancho:100px;
+        --alto:120px; 
+    }
+}
+@media screen and (max-width: 915px){
+    body {
+        --ancho:150px;
+        --alto:170px; 
+    }
+}
+@media screen and (max-width: 550px){
+    body {
+        --ancho:100px;
+        --alto:120px; 
+    }
+}
+@media screen and (max-width: 415px){
+    body {
+        --ancho:80px;
+        --alto:120px; 
+    }
+}
+@media screen and (max-width: 395px){
+    body {
+        --ancho:60px;
+        --alto:120px; 
+    }
+}
+@media screen and (max-width: 282px){
+    body {
+        --ancho:50px;
+        --alto:100px; 
+    }
+}
+
+
+#Card1:not(:checked) + #Card12:checked ~ .ContentAlerta,
+#Card1:checked + #Card12:not(:checked) ~ .ContentAlerta,
+#Card2:not(:checked) + #Card22:checked ~ .ContentAlerta,
+#Card2:checked + #Card22:not(:checked) ~ .ContentAlerta,
+#Card3:not(:checked) + #Card32:checked ~ .ContentAlerta,
+#Card3:checked + #Card32:not(:checked) ~ .ContentAlerta,
+#Card4:not(:checked) + #Card42:checked ~ .ContentAlerta,
+#Card4:checked + #Card42:not(:checked) ~ .ContentAlerta,
+#Card5:not(:checked) + #Card52:checked ~ .ContentAlerta,
+#Card5:checked + #Card52:not(:checked) ~ .ContentAlerta,
+#Card6:not(:checked) + #Card62:checked ~ .ContentAlerta,
+#Card6:checked + #Card62:not(:checked) ~ .ContentAlerta,
+#Card7:not(:checked) + #Card72:checked ~ .ContentAlerta,
+#Card7:checked + #Card72:not(:checked) ~ .ContentAlerta,
+#Card8:not(:checked) + #Card82:checked ~ .ContentAlerta,
+#Card8:checked + #Card82:not(:checked) ~ .ContentAlerta {
+    display: flex;
+}

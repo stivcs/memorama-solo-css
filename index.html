@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <title>memorama</title>
+</head>
+<body>
+   <input type="radio" id="d1" name="dice" />
+   <input type="radio" id="d2" name="dice" />
+   <input type="radio" id="d3" name="dice" />
+   <input type="radio" id="d4" name="dice" />
+   <input type="radio" id="d5" name="dice" />
+   <input type="radio" id="d6" name="dice" />
+
+   <label class="label-dice" for="d1">Start game</label>
+   <label class="label-dice" for="d2">Start game</label>
+   <label class="label-dice" for="d3">Start game</label>
+   <label class="label-dice" for="d4">Start game</label>
+   <label class="label-dice" for="d5">Start game</label>
+   <label class="label-dice" for="d6">Start game</label>
+   <header>
+      <div class="Header">
+         <h1>Memorama</h1>
+      </div>
+    </header>
+   <div class="Contenido">
+      <!-- dados que permiten que el programa sea aleatorio -->
+      <main>
+         
+         <!-- input de los label -->
+         <input type="checkbox" id="Card1">
+         <input type="checkbox" id="Card12">
+         <input type="checkbox" id="Card2">
+         <input type="checkbox" id="Card22">
+         <input type="checkbox" id="Card3">
+         <input type="checkbox" id="Card32">
+         <input type="checkbox" id="Card4">
+         <input type="checkbox" id="Card42">
+         <input type="checkbox" id="Card5">
+         <input type="checkbox" id="Card52">
+         <input type="checkbox" id="Card6">
+         <input type="checkbox" id="Card62">
+         <input type="checkbox" id="Card7">
+         <input type="checkbox" id="Card72">
+         <input type="checkbox" id="Card8">
+         <input type="checkbox" id="Card82"> 
+         <div class="ContentAlerta">
+            <h1>por favor voltea las cartas para continuar</h1>
+         </div>
+         <!-- diseño de las cartas -->
+         <label for="Card1" class="FlipCard FlipCardSelect1">
+            <div class="FlipCardInner">
+               <div class="CardFront">
+                  <img id="Img" class="Carta" src="imagenes/CardBack.jpg" alt="FrontDeLaCarta" >
+               </div>
+               <div class="CardBack">
+                  <img id="Img" class="Carta" src="imagenes/imagen1.2.jpg" alt="DetrasDeLaCarta" >
+               </div>
+            </div>   
+         </label>
+         <!-- segunda carta -->
+         <label for="Card2" class="FlipCard FlipCardSelect2">
+            <div class="FlipCardInner">
+               <div class="CardFront">
+                  <img id="Img" class="Carta" src="imagenes/CardBack.jpg" alt="FrontDeLaCarta" >
+               </div>
+               <div class="CardBack">
+                  <img id="Img" class="Carta" src="imagenes/imagen2.2.jpg" alt="DetrasDeLaCarta" >
+               </div>
+            </div>   
+         </label> 
+         <!-- tercera carta -->
+         <label for="Card3" class="FlipCard FlipCardSelect3">
+            <div class="FlipCardInner">
+               <div class="CardFront">
+                  <img id="Img" class="Carta" src="imagenes/CardBack.jpg" alt="FrontDeLaCarta" >
+               </div>
+               <div class="CardBack">
+                  <img id="Img" class="Carta" src="imagenes/imagen3.3.jpg" alt="DetrasDeLaCarta" >
+               </div>
+            </div>   
+         </label> 
+         <!-- cuarta carta --> 
+         <label for="Card4" class="FlipCard FlipCardSelect4">
+            <div class="FlipCardInner">
+               <div class="CardFront">
+                  <img id="Img" class="Carta" src="imagenes/CardBack.jpg" alt="FrontDeLaCarta" >
+               </div>
+               <div class="CardBack">
+                  <img id="Img" class="Carta" src="imagenes/imagen4.2.jpg" alt="DetrasDeLaCarta" >
+               </div>
+            </div>   
+         </label> 
+         <!-- 5 carta -->
+         <label for="Card5" class="FlipCard FlipCardSelect5">
+            <div class="FlipCardInner">
+               <div class="CardFront">
+                  <img id="Img" class="Carta" src="imagenes/CardBack.jpg" alt="FrontDeLaCarta" >
+               </div>
+               <div class="CardBack">
+                  <img id="Img" class="Carta" src="imagenes/imagen5.2.jpg" alt="DetrasDeLaCarta" >
+               </div>
+            </div>   
+         </label>
+         <!-- sexta carta --> 
+         <label for="Card6" class="FlipCard FlipCardSelect6">
+            <div class="FlipCardInner">
+               <div class="CardFront">
+                  <img id="Img" class="Carta" src="imagenes/CardBack.jpg" alt="FrontDeLaCarta" >
+               </div>
+               <div class="CardBack">
+                  <img id="Img" class="Carta" src="imagenes/imagen6.2.jpg" alt="DetrasDeLaCarta" >
+               </div>
+            </div>   
+         </label> 
+         <!-- septima carta -->
+         <label for="Card7" class="FlipCard FlipCardSelect7">
+            <div class="FlipCardInner">
+               <div class="CardFront">
+                  <img id="Img" class="Carta" src="imagenes/CardBack.jpg" alt="FrontDeLaCarta" >
+               </div>
+               <div class="CardBack">
+                  <img id="Img" class="Carta" src="imagenes/imagen7.2.jpg" alt="DetrasDeLaCarta" >
+               </div>
+            </div>   
+         </label> 
+         <!-- octava carta -->
+         <label for="Card8" class="FlipCard FlipCardSelect8">
+            <div class="FlipCardInner">
+               <div class="CardFront">
+                  <img id="Img" class="Carta" src="imagenes/CardBack.jpg" alt="FrontDeLaCarta" >
+               </div>
+               <div class="CardBack">
+                  <img id="Img" class="Carta" src="imagenes/imagen8.2.jpg" alt="DetrasDeLaCarta" >
+               </div>
+            </div>   
+         </label> 
+         <!-- novena carta 1-2 --> 
+         <label for="Card12" class="FlipCard FlipCardSelect12">
+            <div class="FlipCardInner">
+               <div class="CardFront">
+                  <img id="Img" class="Carta" src="imagenes/CardBack.jpg" alt="FrontDeLaCarta" >
+               </div>
+               <div class="CardBack">
+                  <img id="Img" class="Carta" src="imagenes/imagen1.2.jpg" alt="DetrasDeLaCarta" >
+               </div>
+            </div>   
+         </label>
+         <!--decima carta 2-2  -->
+         <label for="Card22" class="FlipCard FlipCardSelect22">
+            <div class="FlipCardInner">
+               <div class="CardFront">
+                  <img id="Img" class="Carta" src="imagenes/CardBack.jpg" alt="FrontDeLaCarta" >
+               </div>
+               <div class="CardBack">
+                  <img id="Img" class="Carta" src="imagenes/imagen2.2.jpg" alt="DetrasDeLaCarta" >
+               </div>
+            </div>   
+         </label> 
+         <!-- 11 carta 3-2 -->
+         <label for="Card32" class="FlipCard FlipCardSelect32">
+            <div class="FlipCardInner">
+               <div class="CardFront">
+                  <img id="Img" class="Carta" src="imagenes/CardBack.jpg" alt="FrontDeLaCarta" >
+               </div>
+               <div class="CardBack">
+                  <img id="Img" class="Carta" src="imagenes/imagen3.3.jpg" alt="DetrasDeLaCarta" >
+               </div>
+            </div>   
+         </label> 
+         <!-- 12 carta 4-2 -->
+         <label for="Card42" class="FlipCard FlipCardSelect42">
+            <div class="FlipCardInner">
+               <div class="CardFront">
+                  <img id="Img" class="Carta" src="imagenes/CardBack.jpg" alt="FrontDeLaCarta" >
+               </div>
+               <div class="CardBack">
+                  <img id="Img" class="Carta" src="imagenes/imagen4.2.jpg" alt="DetrasDeLaCarta" >
+               </div>
+            </div>   
+         </label> 
+         <!-- 13 carta 5-2 -->
+         <label for="Card52" class="FlipCard FlipCardSelect52">
+            <div class="FlipCardInner">
+               <div class="CardFront">
+                  <img id="Img" class="Carta" src="imagenes/CardBack.jpg" alt="FrontDeLaCarta" >
+               </div>
+               <div class="CardBack">
+                  <img id="Img" class="Carta" src="imagenes/imagen5.2.jpg" alt="DetrasDeLaCarta" >
+               </div>
+            </div>   
+         </label> 
+         <!-- 14 carta 6-2 --> 
+         <label for="Card62" class="FlipCard FlipCardSelect62">
+            <div class="FlipCardInner">
+               <div class="CardFront">
+                  <img id="Img" class="Carta" src="imagenes/CardBack.jpg" alt="FrontDeLaCarta" >
+               </div>
+               <div class="CardBack">
+                  <img id="Img" class="Carta" src="imagenes/imagen6.2.jpg" alt="DetrasDeLaCarta" >
+               </div>
+            </div>   
+         </label>
+         <!-- 15 carta 7-2 -->
+         <label for="Card72" class="FlipCard FlipCardSelect72">
+            <div class="FlipCardInner">
+               <div class="CardFront">
+                  <img id="Img" class="Carta" src="imagenes/CardBack.jpg" alt="FrontDeLaCarta" >
+               </div>
+               <div class="CardBack">
+                  <img id="Img" class="Carta" src="imagenes/imagen7.2.jpg" alt="DetrasDeLaCarta" >
+               </div>
+            </div>   
+         </label> 
+         <!-- 16 carta 8-2 -->
+         <label for="Card82" class="FlipCard FlipCardSelect82">
+            <div class="FlipCardInner">
+               <div class="CardFront">
+                  <img id="Img" class="Carta" src="imagenes/CardBack.jpg" alt="FrontDeLaCarta" >
+               </div>
+               <div class="CardBack">
+                  <img id="Img" class="Carta" src="imagenes/imagen8.2.jpg" alt="DetrasDeLaCarta" >
+               </div>
+            </div>   
+         </label>
+         <div class="ContenedorModal">
+            <div class="Ganaste">
+               <h1>Ganaste!</h1>
+               <a href="./index.html">
+                  <button>
+                     Play Again
+                  </button>
+               </a>
+            </div>
+         </div>
+      </main>
+   </div>
+</body>
+</html>
