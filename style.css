@@ -180,6 +180,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+    background-color: black;
 
     --ancho : 125px;
     --alto : 195px;
@@ -193,7 +194,7 @@ body {
     box-shadow: 0 10px 10px rgb(255, 21, 21);
     justify-content: center;
     align-items: center;
-    height: 60px;
+    height: 40px;
     width: 100%;
     border-color: rgb(255, 255, 255);
     border-bottom: 2px;
@@ -202,6 +203,7 @@ body {
     border-top: 0;
     border-style: solid;
     font-family: 'Caveat', cursive;
+    font-size: 15px;
 }
 .Contenido {
     margin-top: 1%;
@@ -225,13 +227,19 @@ main {
 #Img {
     width: var(--ancho);
     height: var(--alto);
+    border-radius: 10px;
+    border: 1px;
+    border-color: #ffffff;
+    border-style: solid;
+    box-shadow: #ffffff 0px 0px 10px;
 }
+
 
 .FlipCard {
     background-color: transparent;
     width: var(--ancho);
     height: var(--alto);
-    border: 1px solid #e100ff8e;
+    border-radius: 10px;
     perspective: 1000px;
 }
 
@@ -266,7 +274,9 @@ input[type="checkbox"],
 input[type="radio"] {
     display: none;
   }
-
+main {
+    margin-top: 30px;
+}
 main label {
     margin-right: 5px;
     margin-bottom: 10px;
