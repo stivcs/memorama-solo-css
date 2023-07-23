@@ -175,7 +175,12 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    background: url(imagenes/valoFondo2.jpg) center center/ cover;
+    background-image: url("imagenes/valoFondo2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
     --ancho : 125px;
     --alto : 195px;
     
@@ -268,14 +273,15 @@ main label {
 }
 .ContentAlerta {
     display: none;
-    background-color: rgba(34, 34, 34, 0.498);
-    color: rgb(214, 59, 59);
+    background-color: rgba(255, 255, 255, 0.753);
+    color: rgb(0, 0, 0);
     border-radius: 5px;
     position: absolute;
     z-index: 10;
     top: 9%;
     font-size: 8px;
     padding-left: 5px; padding-right: 5px;
+    position: fixed;
     pointer-events: none;
 }
 /* style del modal de ganaste */
@@ -290,7 +296,7 @@ main label {
     justify-content: center;
     width: 300px;
     height: 300px;
-    background-color: #950000;
+    background-color: #430070b4;
     color: white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.2),
@@ -461,7 +467,7 @@ main label {
 }
 
 
-#Card1:not(:checked) + #Card12:checked ~ .ContentAlerta,
+/* #Card1:not(:checked) + #Card12:checked ~ .ContentAlerta,
 #Card1:checked + #Card12:not(:checked) ~ .ContentAlerta,
 #Card2:not(:checked) + #Card22:checked ~ .ContentAlerta,
 #Card2:checked + #Card22:not(:checked) ~ .ContentAlerta,
@@ -476,6 +482,792 @@ main label {
 #Card7:not(:checked) + #Card72:checked ~ .ContentAlerta,
 #Card7:checked + #Card72:not(:checked) ~ .ContentAlerta,
 #Card8:not(:checked) + #Card82:checked ~ .ContentAlerta,
-#Card8:checked + #Card82:not(:checked) ~ .ContentAlerta {
+#Card8:checked + #Card82:not(:checked) ~ ~ .ContentAlerta, {
     display: flex;
+} */
+
+/* ------------------------------------- Bloquear todas las cartas cuando dos no son iguales -------------------------------------- */
+/* --------------------------------------------------- Patron para #card-1 --------------------------------------------------- */
+#Card1:checked ~ #Card12:not(:checked) ~ #Card2:checked ~ #Card22:not(:checked) ~ label:not(:nth-of-type(1)):not(:nth-of-type(3)),
+#Card1:checked ~ #Card12:not(:checked) ~ #Card2:not(:checked) ~ #Card22:checked ~ label:not(:nth-of-type(1)):not(:nth-of-type(4)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card1:checked ~ #Card12:not(:checked) ~ #Card3:checked ~ #Card32:not(:checked) ~ label:not(:nth-of-type(1)):not(:nth-of-type(5)),
+#Card1:checked ~ #Card12:not(:checked) ~ #Card3:not(:checked) ~ #Card32:checked ~ label:not(:nth-of-type(1)):not(:nth-of-type(6)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card1:checked ~ #Card12:not(:checked) ~ #Card4:checked ~ #Card42:not(:checked) ~ label:not(:nth-of-type(1)):not(:nth-of-type(7)),
+#Card1:checked ~ #Card12:not(:checked) ~ #Card4:not(:checked) ~ #Card42:checked ~ label:not(:nth-of-type(1)):not(:nth-of-type(8)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card1:checked ~ #Card12:not(:checked) ~ #Card5:checked ~ #Card52:not(:checked) ~ label:not(:nth-of-type(1)):not(:nth-of-type(9)),
+#Card1:checked ~ #Card12:not(:checked) ~ #Card5:not(:checked) ~ #Card52:checked ~ label:not(:nth-of-type(1)):not(:nth-of-type(10)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card1:checked ~ #Card12:not(:checked) ~ #Card6:checked ~ #Card62:not(:checked) ~ label:not(:nth-of-type(1)):not(:nth-of-type(11)),
+#Card1:checked ~ #Card12:not(:checked) ~ #Card6:not(:checked) ~ #Card62:checked ~ label:not(:nth-of-type(1)):not(:nth-of-type(12)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card1:checked ~ #Card12:not(:checked) ~ #Card7:checked ~ #Card72:not(:checked) ~ label:not(:nth-of-type(1)):not(:nth-of-type(13)),
+#Card1:checked ~ #Card12:not(:checked) ~ #Card7:not(:checked) ~ #Card72:checked ~ label:not(:nth-of-type(1)):not(:nth-of-type(14)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card1:checked ~ #Card12:not(:checked) ~ #Card8:checked ~ #Card82:not(:checked) ~ label:not(:nth-of-type(1)):not(:nth-of-type(15)),
+#Card1:checked ~ #Card12:not(:checked) ~ #Card8:not(:checked) ~ #Card82:checked ~ label:not(:nth-of-type(1)):not(:nth-of-type(16)),
+
+
+/* --------------------------------------------------- Patron para #card-2 --------------------------------------------------- */
+
+
+#Card1:not(:checked) ~ #Card12:checked ~ #Card2:checked ~ #Card22:not(:checked) ~ label:not(:nth-of-type(2)):not(:nth-of-type(3)),
+#Card1:not(:checked) ~ #Card12:checked ~ #Card2:not(:checked) ~ #Card22:checked ~ label:not(:nth-of-type(2)):not(:nth-of-type(4)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card1:not(:checked) ~ #Card12:checked ~ #Card3:checked ~ #Card32:not(:checked) ~ label:not(:nth-of-type(2)):not(:nth-of-type(5)),
+#Card1:not(:checked) ~ #Card12:checked ~ #Card3:not(:checked) ~ #Card32:checked ~ label:not(:nth-of-type(2)):not(:nth-of-type(6)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card1:not(:checked) ~ #Card12:checked ~ #Card4:checked ~ #Card42:not(:checked) ~ label:not(:nth-of-type(2)):not(:nth-of-type(7)),
+#Card1:not(:checked) ~ #Card12:checked ~ #Card4:not(:checked) ~ #Card42:checked ~ label:not(:nth-of-type(2)):not(:nth-of-type(8)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card1:not(:checked) ~ #Card12:checked ~ #Card5:checked ~ #Card52:not(:checked) ~ label:not(:nth-of-type(2)):not(:nth-of-type(9)),
+#Card1:not(:checked) ~ #Card12:checked ~ #Card5:not(:checked) ~ #Card52:checked ~ label:not(:nth-of-type(2)):not(:nth-of-type(10)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card1:not(:checked) ~ #Card12:checked ~ #Card6:checked ~ #Card62:not(:checked) ~ label:not(:nth-of-type(2)):not(:nth-of-type(11)),
+#Card1:not(:checked) ~ #Card12:checked ~ #Card6:not(:checked) ~ #Card62:checked ~ label:not(:nth-of-type(2)):not(:nth-of-type(12)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card1:not(:checked) ~ #Card12:checked ~ #Card7:checked ~ #Card72:not(:checked) ~ label:not(:nth-of-type(2)):not(:nth-of-type(13)),
+#Card1:not(:checked) ~ #Card12:checked ~ #Card7:not(:checked) ~ #Card72:checked ~ label:not(:nth-of-type(2)):not(:nth-of-type(14)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card1:not(:checked) ~ #Card12:checked ~ #Card8:checked ~ #Card82:not(:checked) ~ label:not(:nth-of-type(2)):not(:nth-of-type(15)),
+#Card1:not(:checked) ~ #Card12:checked ~ #Card8:not(:checked) ~ #Card82:checked ~ label:not(:nth-of-type(2)):not(:nth-of-type(16)),
+
+
+/* --------------------------------------------------- Patron para #card-3 --------------------------------------------------- */
+
+
+#Card1:checked ~ #Card12:not(:checked) ~ #Card2:checked ~ #Card22:not(:checked) ~ label:not(:nth-of-type(1)):not(:nth-of-type(3)),
+#Card1:not(:checked) ~ #Card12:checked ~ #Card2:checked ~ #Card22:not(:checked) ~ label:not(:nth-of-type(2)):not(:nth-of-type(3)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card3:checked ~ #Card32:not(:checked) ~ label:not(:nth-of-type(3)):not(:nth-of-type(5)),
+#Card2:checked ~ #Card22:not(:checked) ~ #Card3:not(:checked) ~ #Card32:checked ~ label:not(:nth-of-type(3)):not(:nth-of-type(6)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card4:checked ~ #Card42:not(:checked) ~ label:not(:nth-of-type(3)):not(:nth-of-type(7)),
+#Card2:checked ~ #Card22:not(:checked) ~ #Card4:not(:checked) ~ #Card42:checked ~ label:not(:nth-of-type(3)):not(:nth-of-type(8)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card5:checked ~ #Card52:not(:checked) ~ label:not(:nth-of-type(3)):not(:nth-of-type(9)),
+#Card2:checked ~ #Card22:not(:checked) ~ #Card5:not(:checked) ~ #Card52:checked ~ label:not(:nth-of-type(3)):not(:nth-of-type(10)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card6:checked ~ #Card62:not(:checked) ~ label:not(:nth-of-type(3)):not(:nth-of-type(11)),
+#Card2:checked ~ #Card22:not(:checked) ~ #Card6:not(:checked) ~ #Card62:checked ~ label:not(:nth-of-type(3)):not(:nth-of-type(12)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card7:checked ~ #Card72:not(:checked) ~ label:not(:nth-of-type(3)):not(:nth-of-type(13)),
+#Card2:checked ~ #Card22:not(:checked) ~ #Card7:not(:checked) ~ #Card72:checked ~ label:not(:nth-of-type(3)):not(:nth-of-type(14)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card8:checked ~ #Card82:not(:checked) ~ label:not(:nth-of-type(3)):not(:nth-of-type(15)),
+#Card2:checked ~ #Card22:not(:checked) ~ #Card8:not(:checked) ~ #Card82:checked ~ label:not(:nth-of-type(3)):not(:nth-of-type(16))
+
+
+/* --------------------------------------------------- Patron para #card-4 --------------------------------------------------- */
+
+
+#Card1:checked ~ #Card12:not(:checked) ~ #Card2:not(:checked) ~ #Card22:checked ~ label:not(:nth-of-type(1)):not(:nth-of-type(4)),
+#Card1:not(:checked) ~ #Card12:checked ~ #Card2:not(:checked) ~ #Card22:checked ~ label:not(:nth-of-type(2)):not(:nth-of-type(4)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:not(:checked) ~ #Card22:checked ~ #Card3:checked ~ #Card32:not(:checked) ~ label:not(:nth-of-type(4)):not(:nth-of-type(5)),
+#Card2:not(:checked) ~ #Card22:checked ~ #Card3:not(:checked) ~ #Card32:checked ~ label:not(:nth-of-type(4)):not(:nth-of-type(6)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:not(:checked) ~ #Card22:checked ~ #Card4:checked ~ #Card42:not(:checked) ~ label:not(:nth-of-type(4)):not(:nth-of-type(7)),
+#Card2:not(:checked) ~ #Card22:checked ~ #Card4:not(:checked) ~ #Card42:checked ~ label:not(:nth-of-type(4)):not(:nth-of-type(8)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:not(:checked) ~ #Card22:checked ~ #Card5:checked ~ #Card52:not(:checked) ~ label:not(:nth-of-type(4)):not(:nth-of-type(9)),
+#Card2:not(:checked) ~ #Card22:checked ~ #Card5:not(:checked) ~ #Card52:checked ~ label:not(:nth-of-type(4)):not(:nth-of-type(10)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:not(:checked) ~ #Card22:checked ~ #Card6:checked ~ #Card62:not(:checked) ~ label:not(:nth-of-type(4)):not(:nth-of-type(11)),
+#Card2:not(:checked) ~ #Card22:checked ~ #Card6:not(:checked) ~ #Card62:checked ~ label:not(:nth-of-type(4)):not(:nth-of-type(12)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:not(:checked) ~ #Card22:checked ~ #Card7:checked ~ #Card72:not(:checked) ~ label:not(:nth-of-type(4)):not(:nth-of-type(13)),
+#Card2:not(:checked) ~ #Card22:checked ~ #Card7:not(:checked) ~ #Card72:checked ~ label:not(:nth-of-type(4)):not(:nth-of-type(14)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:not(:checked) ~ #Card22:checked ~ #Card8:checked ~ #Card82:not(:checked) ~ label:not(:nth-of-type(4)):not(:nth-of-type(15)),
+#Card2:not(:checked) ~ #Card22:checked ~ #Card8:not(:checked) ~ #Card82:checked ~ label:not(:nth-of-type(4)):not(:nth-of-type(16)),
+
+
+/* --------------------------------------------------- Patron para #card-5 --------------------------------------------------- */
+
+
+#Card1:checked ~ #Card12:not(:checked) ~ #Card3:checked ~ #Card32:not(:checked) ~ label:not(:nth-of-type(1)):not(:nth-of-type(5)),
+#Card1:not(:checked) ~ #Card12:checked ~ #Card3:checked ~ #Card32:not(:checked) ~ label:not(:nth-of-type(2)):not(:nth-of-type(5)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card3:checked ~ #Card32:not(:checked) ~ label:not(:nth-of-type(3)):not(:nth-of-type(5)),
+#Card2:not(:checked) ~ #Card22:checked ~ #Card3:checked ~ #Card32:not(:checked) ~ label:not(:nth-of-type(4)):not(:nth-of-type(5)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:checked ~ #Card32:not(:checked) ~ #Card4:checked ~ #Card42:not(:checked) ~ label:not(:nth-of-type(5)):not(:nth-of-type(7)),
+#Card3:checked ~ #Card32:not(:checked) ~ #Card4:not(:checked) ~ #Card42:checked ~ label:not(:nth-of-type(5)):not(:nth-of-type(8)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:checked ~ #Card32:not(:checked) ~ #Card5:checked ~ #Card52:not(:checked) ~ label:not(:nth-of-type(5)):not(:nth-of-type(9)),
+#Card3:checked ~ #Card32:not(:checked) ~ #Card5:not(:checked) ~ #Card52:checked ~ label:not(:nth-of-type(5)):not(:nth-of-type(10)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:checked ~ #Card32:not(:checked) ~ #Card6:checked ~ #Card62:not(:checked) ~ label:not(:nth-of-type(5)):not(:nth-of-type(11)),
+#Card3:checked ~ #Card32:not(:checked) ~ #Card6:not(:checked) ~ #Card62:checked ~ label:not(:nth-of-type(5)):not(:nth-of-type(12)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:checked ~ #Card32:not(:checked) ~ #Card7:checked ~ #Card72:not(:checked) ~ label:not(:nth-of-type(5)):not(:nth-of-type(13)),
+#Card3:checked ~ #Card32:not(:checked) ~ #Card7:not(:checked) ~ #Card72:checked ~ label:not(:nth-of-type(5)):not(:nth-of-type(14)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:checked ~ #Card32:not(:checked) ~ #Card8:checked ~ #Card82:not(:checked) ~ label:not(:nth-of-type(5)):not(:nth-of-type(15)),
+#Card3:checked ~ #Card32:not(:checked) ~ #Card8:not(:checked) ~ #Card82:checked ~ label:not(:nth-of-type(5)):not(:nth-of-type(16)),
+
+
+/* --------------------------------------------------- Patron para #card-6 --------------------------------------------------- */
+
+
+#Card1:checked ~ #Card12:not(:checked) ~ #Card3:not(:checked) ~ #Card32:checked ~ label:not(:nth-of-type(1)):not(:nth-of-type(6)),
+#Card1:not(:checked) ~ #Card12:checked ~ #Card3:not(:checked) ~ #Card32:checked ~ label:not(:nth-of-type(2)):not(:nth-of-type(6)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card3:not(:checked) ~ #Card32:checked ~ label:not(:nth-of-type(3)):not(:nth-of-type(6)),
+#Card2:not(:checked) ~ #Card22:checked ~ #Card3:not(:checked) ~ #Card32:checked ~ label:not(:nth-of-type(4)):not(:nth-of-type(6)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:not(:checked) ~ #Card32:checked ~ #Card4:checked ~ #Card42:not(:checked) ~ label:not(:nth-of-type(5)):not(:nth-of-type(7)),
+#Card3:not(:checked) ~ #Card32:checked ~ #Card4:not(:checked) ~ #Card42:checked ~ label:not(:nth-of-type(5)):not(:nth-of-type(8)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:not(:checked) ~ #Card32:checked ~ #Card5:checked ~ #Card52:not(:checked) ~ label:not(:nth-of-type(5)):not(:nth-of-type(9)),
+#Card3:not(:checked) ~ #Card32:checked ~ #Card5:not(:checked) ~ #Card52:checked ~ label:not(:nth-of-type(5)):not(:nth-of-type(10)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:not(:checked) ~ #Card32:checked ~ #Card6:checked ~ #Card62:not(:checked) ~ label:not(:nth-of-type(5)):not(:nth-of-type(11)),
+#Card3:not(:checked) ~ #Card32:checked ~ #Card6:not(:checked) ~ #Card62:checked ~ label:not(:nth-of-type(5)):not(:nth-of-type(12)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:not(:checked) ~ #Card32:checked ~ #Card7:checked ~ #Card72:not(:checked) ~ label:not(:nth-of-type(5)):not(:nth-of-type(13)),
+#Card3:not(:checked) ~ #Card32:checked ~ #Card7:not(:checked) ~ #Card72:checked ~ label:not(:nth-of-type(5)):not(:nth-of-type(14)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:not(:checked) ~ #Card32:checked ~ #Card8:checked ~ #Card82:not(:checked) ~ label:not(:nth-of-type(5)):not(:nth-of-type(15)),
+#Card3:not(:checked) ~ #Card32:checked ~ #Card8:not(:checked) ~ #Card82:checked ~ label:not(:nth-of-type(5)):not(:nth-of-type(16)),
+
+
+/* --------------------------------------------------- Patron para #card-7 --------------------------------------------------- */
+
+
+#Card1:checked ~ #Card12:not(:checked) ~ #Card4:checked ~ #Card42:not(:checked) ~ label:not(:nth-of-type(1)):not(:nth-of-type(7)),
+#Card1:not(:checked) ~ #Card12:checked ~ #Card4:checked ~ #Card42:not(:checked) ~ label:not(:nth-of-type(2)):not(:nth-of-type(7)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card4:checked ~ #Card42:not(:checked) ~ label:not(:nth-of-type(3)):not(:nth-of-type(7)),
+#Card2:not(:checked) ~ #Card22:checked ~ #Card4:checked ~ #Card42:not(:checked) ~ label:not(:nth-of-type(4)):not(:nth-of-type(7)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:checked ~ #Card32:not(:checked) ~ #Card4:checked ~ #Card42:not(:checked) ~ label:not(:nth-of-type(5)):not(:nth-of-type(7)),
+#Card3:not(:checked) ~ #Card32:checked ~ #Card4:checked ~ #Card42:not(:checked) ~ label:not(:nth-of-type(6)):not(:nth-of-type(7)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card4:checked ~ #Card42:not(:checked) ~ #Card5:checked ~ #Card52:not(:checked) ~ label:not(:nth-of-type(7)):not(:nth-of-type(9)),
+#Card4:checked ~ #Card42:not(:checked) ~ #Card5:not(:checked) ~ #Card52:checked ~ label:not(:nth-of-type(7)):not(:nth-of-type(10)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card4:checked ~ #Card42:not(:checked) ~ #Card6:checked ~ #Card62:not(:checked) ~ label:not(:nth-of-type(7)):not(:nth-of-type(11)),
+#Card4:checked ~ #Card42:not(:checked) ~ #Card6:not(:checked) ~ #Card62:checked ~ label:not(:nth-of-type(7)):not(:nth-of-type(12)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card4:checked ~ #Card42:not(:checked) ~ #Card7:checked ~ #Card72:not(:checked) ~ label:not(:nth-of-type(7)):not(:nth-of-type(13)),
+#Card4:checked ~ #Card42:not(:checked) ~ #Card7:not(:checked) ~ #Card72:checked ~ label:not(:nth-of-type(7)):not(:nth-of-type(14)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card4:checked ~ #Card42:not(:checked) ~ #Card8:checked ~ #Card82:not(:checked) ~ label:not(:nth-of-type(7)):not(:nth-of-type(15)),
+#Card4:checked ~ #Card42:not(:checked) ~ #Card8:not(:checked) ~ #Card82:checked ~ label:not(:nth-of-type(7)):not(:nth-of-type(16)),
+
+
+/* --------------------------------------------------- Patron para #card-8 --------------------------------------------------- */
+
+
+#Card1:checked ~ #Card12:not(:checked) ~ #Card4:not(:checked) ~ #Card42:checked ~ label:not(:nth-of-type(1)):not(:nth-of-type(8)),
+#Card1:not(:checked) ~ #Card12:checked ~ #Card4:not(:checked) ~ #Card42:checked ~ label:not(:nth-of-type(2)):not(:nth-of-type(8)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card4:not(:checked) ~ #Card42:checked ~ label:not(:nth-of-type(3)):not(:nth-of-type(8)),
+#Card2:not(:checked) ~ #Card22:checked ~ #Card4:not(:checked) ~ #Card42:checked ~ label:not(:nth-of-type(4)):not(:nth-of-type(8)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:checked ~ #Card32:not(:checked) ~ #Card4:not(:checked) ~ #Card42:checked ~ label:not(:nth-of-type(5)):not(:nth-of-type(8)),
+#Card3:not(:checked) ~ #Card32:checked ~ #Card4:not(:checked) ~ #Card42:checked ~ label:not(:nth-of-type(6)):not(:nth-of-type(8)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card4:not(:checked) ~ #Card42:checked ~ #Card5:checked ~ #Card52:not(:checked) ~ label:not(:nth-of-type(7)):not(:nth-of-type(9)),
+#Card4:not(:checked) ~ #Card42:checked ~ #Card5:not(:checked) ~ #Card52:checked ~ label:not(:nth-of-type(7)):not(:nth-of-type(10)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card4:not(:checked) ~ #Card42:checked ~ #Card6:checked ~ #Card62:not(:checked) ~ label:not(:nth-of-type(7)):not(:nth-of-type(11)),
+#Card4:not(:checked) ~ #Card42:checked ~ #Card6:not(:checked) ~ #Card62:checked ~ label:not(:nth-of-type(7)):not(:nth-of-type(12)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card4:not(:checked) ~ #Card42:checked ~ #Card7:checked ~ #Card72:not(:checked) ~ label:not(:nth-of-type(7)):not(:nth-of-type(13)),
+#Card4:not(:checked) ~ #Card42:checked ~ #Card7:not(:checked) ~ #Card72:checked ~ label:not(:nth-of-type(7)):not(:nth-of-type(14)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card4:not(:checked) ~ #Card42:checked ~ #Card8:checked ~ #Card82:not(:checked) ~ label:not(:nth-of-type(7)):not(:nth-of-type(15)),
+#Card4:not(:checked) ~ #Card42:checked ~ #Card8:not(:checked) ~ #Card82:checked ~ label:not(:nth-of-type(7)):not(:nth-of-type(16)),
+
+
+/* --------------------------------------------------- Patron para #card-9 --------------------------------------------------- */
+
+
+#Card1:checked ~ #Card12:not(:checked) ~ #Card5:checked ~ #Card52:not(:checked) ~ label:not(:nth-of-type(1)):not(:nth-of-type(9)),
+#Card1:not(:checked) ~ #Card12:checked ~ #Card5:checked ~ #Card52:not(:checked) ~ label:not(:nth-of-type(2)):not(:nth-of-type(9)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card5:checked ~ #Card52:not(:checked) ~ label:not(:nth-of-type(3)):not(:nth-of-type(9)),
+#Card2:not(:checked) ~ #Card22:checked ~ #Card5:checked ~ #Card52:not(:checked) ~ label:not(:nth-of-type(4)):not(:nth-of-type(9)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:checked ~ #Card32:not(:checked) ~ #Card5:checked ~ #Card52:not(:checked) ~ label:not(:nth-of-type(5)):not(:nth-of-type(9)),
+#Card3:not(:checked) ~ #Card32:checked ~ #Card5:checked ~ #Card52:not(:checked) ~ label:not(:nth-of-type(6)):not(:nth-of-type(9)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card4:checked ~ #Card42:not(:checked) ~ #Card5:checked ~ #Card52:not(:checked) ~ label:not(:nth-of-type(7)):not(:nth-of-type(9)),
+#Card4:not(:checked) ~ #Card42:checked ~ #Card5:checked ~ #Card52:not(:checked) ~ label:not(:nth-of-type(8)):not(:nth-of-type(9)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card5:checked ~ #Card52:not(:checked) ~ #Card6:checked ~ #Card62:not(:checked) ~ label:not(:nth-of-type(9)):not(:nth-of-type(11)),
+#Card5:checked ~ #Card52:not(:checked) ~ #Card6:not(:checked) ~ #Card62:checked ~ label:not(:nth-of-type(9)):not(:nth-of-type(12)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card5:checked ~ #Card52:not(:checked) ~ #Card7:checked ~ #Card72:not(:checked) ~ label:not(:nth-of-type(9)):not(:nth-of-type(13)),
+#Card5:checked ~ #Card52:not(:checked) ~ #Card7:not(:checked) ~ #Card72:checked ~ label:not(:nth-of-type(9)):not(:nth-of-type(14)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card5:checked ~ #Card52:not(:checked) ~ #Card8:checked ~ #Card82:not(:checked) ~ label:not(:nth-of-type(9)):not(:nth-of-type(15)),
+#Card5:checked ~ #Card52:not(:checked) ~ #Card8:not(:checked) ~ #Card82:checked ~ label:not(:nth-of-type(9)):not(:nth-of-type(16)),
+
+
+/* --------------------------------------------------- Patron para #card-10 --------------------------------------------------- */
+
+
+#Card1:checked ~ #Card12:not(:checked) ~ #Card5:not(:checked) ~ #Card52:checked ~ label:not(:nth-of-type(1)):not(:nth-of-type(10)),
+#Card1:not(:checked) ~ #Card12:checked ~ #Card5:not(:checked) ~ #Card52:checked ~ label:not(:nth-of-type(2)):not(:nth-of-type(10)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card5:not(:checked) ~ #Card52:checked ~ label:not(:nth-of-type(3)):not(:nth-of-type(10)),
+#Card2:not(:checked) ~ #Card22:checked ~ #Card5:not(:checked) ~ #Card52:checked ~ label:not(:nth-of-type(4)):not(:nth-of-type(10)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:checked ~ #Card32:not(:checked) ~ #Card5:not(:checked) ~ #Card52:checked ~ label:not(:nth-of-type(5)):not(:nth-of-type(10)),
+#Card3:not(:checked) ~ #Card32:checked ~ #Card5:not(:checked) ~ #Card52:checked ~ label:not(:nth-of-type(6)):not(:nth-of-type(10)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card4:checked ~ #Card42:not(:checked) ~ #Card5:not(:checked) ~ #Card52:checked ~ label:not(:nth-of-type(7)):not(:nth-of-type(10)),
+#Card4:not(:checked) ~ #Card42:checked ~ #Card5:not(:checked) ~ #Card52:checked ~ label:not(:nth-of-type(8)):not(:nth-of-type(10)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card5:not(:checked) ~ #Card52:checked ~ #Card6:checked ~ #Card62:not(:checked) ~ label:not(:nth-of-type(9)):not(:nth-of-type(11)),
+#Card5:not(:checked) ~ #Card52:checked ~ #Card6:not(:checked) ~ #Card62:checked ~ label:not(:nth-of-type(9)):not(:nth-of-type(12)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card5:not(:checked) ~ #Card52:checked ~ #Card7:checked ~ #Card72:not(:checked) ~ label:not(:nth-of-type(9)):not(:nth-of-type(13)),
+#Card5:not(:checked) ~ #Card52:checked ~ #Card7:not(:checked) ~ #Card72:checked ~ label:not(:nth-of-type(9)):not(:nth-of-type(14)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card5:not(:checked) ~ #Card52:checked ~ #Card8:checked ~ #Card82:not(:checked) ~ label:not(:nth-of-type(9)):not(:nth-of-type(15)),
+#Card5:not(:checked) ~ #Card52:checked ~ #Card8:not(:checked) ~ #Card82:checked ~ label:not(:nth-of-type(9)):not(:nth-of-type(16)),
+
+
+/* --------------------------------------------------- Patron para #card-11 --------------------------------------------------- */
+
+
+#Card1:checked ~ #Card12:not(:checked) ~ #Card6:checked ~ #Card62:not(:checked) ~ label:not(:nth-of-type(1)):not(:nth-of-type(11)),
+#Card1:not(:checked) ~ #Card12:checked ~ #Card6:checked ~ #Card62:not(:checked) ~ label:not(:nth-of-type(2)):not(:nth-of-type(11)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card6:checked ~ #Card62:not(:checked) ~ label:not(:nth-of-type(3)):not(:nth-of-type(11)),
+#Card2:not(:checked) ~ #Card22:checked ~ #Card6:checked ~ #Card62:not(:checked) ~ label:not(:nth-of-type(4)):not(:nth-of-type(11)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:checked ~ #Card32:not(:checked) ~ #Card6:checked ~ #Card62:not(:checked) ~ label:not(:nth-of-type(5)):not(:nth-of-type(11)),
+#Card3:not(:checked) ~ #Card32:checked ~ #Card6:checked ~ #Card62:not(:checked) ~ label:not(:nth-of-type(6)):not(:nth-of-type(11)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card4:checked ~ #Card42:not(:checked) ~ #Card6:checked ~ #Card62:not(:checked) ~ label:not(:nth-of-type(7)):not(:nth-of-type(11)),
+#Card4:not(:checked) ~ #Card42:checked ~ #Card6:checked ~ #Card62:not(:checked) ~ label:not(:nth-of-type(8)):not(:nth-of-type(11)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card5:checked ~ #Card52:not(:checked) ~ #Card6:checked ~ #Card62:not(:checked) ~ label:not(:nth-of-type(9)):not(:nth-of-type(11)),
+#Card5:not(:checked) ~ #Card52:checked ~ #Card6:checked ~ #Card62:not(:checked) ~ label:not(:nth-of-type(10)):not(:nth-of-type(11)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card6:checked ~ #Card62:not(:checked) ~ #Card7:checked ~ #Card72:not(:checked) ~ label:not(:nth-of-type(11)):not(:nth-of-type(13)),
+#Card6:checked ~ #Card62:not(:checked) ~ #Card7:not(:checked) ~ #Card72:checked ~ label:not(:nth-of-type(11)):not(:nth-of-type(14)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card6:checked ~ #Card62:not(:checked) ~ #Card8:checked ~ #Card82:not(:checked) ~ label:not(:nth-of-type(11)):not(:nth-of-type(15)),
+#Card6:checked ~ #Card62:not(:checked) ~ #Card8:not(:checked) ~ #Card82:checked ~ label:not(:nth-of-type(11)):not(:nth-of-type(16)),
+
+
+/* --------------------------------------------------- Patron para #card-12 --------------------------------------------------- */
+
+
+#Card1:checked ~ #Card12:not(:checked) ~ #Card6:not(:checked) ~ #Card62:checked ~ label:not(:nth-of-type(1)):not(:nth-of-type(12)),
+#Card1:not(:checked) ~ #Card12:checked ~ #Card6:not(:checked) ~ #Card62:checked ~ label:not(:nth-of-type(2)):not(:nth-of-type(12)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card6:not(:checked) ~ #Card62:checked ~ label:not(:nth-of-type(3)):not(:nth-of-type(12)),
+#Card2:not(:checked) ~ #Card22:checked ~ #Card6:not(:checked) ~ #Card62:checked ~ label:not(:nth-of-type(4)):not(:nth-of-type(12)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:checked ~ #Card32:not(:checked) ~ #Card6:not(:checked) ~ #Card62:checked ~ label:not(:nth-of-type(5)):not(:nth-of-type(12)),
+#Card3:not(:checked) ~ #Card32:checked ~ #Card6:not(:checked) ~ #Card62:checked ~ label:not(:nth-of-type(6)):not(:nth-of-type(12)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card4:checked ~ #Card42:not(:checked) ~ #Card6:not(:checked) ~ #Card62:checked ~ label:not(:nth-of-type(7)):not(:nth-of-type(12)),
+#Card4:not(:checked) ~ #Card42:checked ~ #Card6:not(:checked) ~ #Card62:checked ~ label:not(:nth-of-type(8)):not(:nth-of-type(12)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card5:checked ~ #Card52:not(:checked) ~ #Card6:not(:checked) ~ #Card62:checked ~ label:not(:nth-of-type(9)):not(:nth-of-type(12)),
+#Card5:not(:checked) ~ #Card52:checked ~ #Card6:not(:checked) ~ #Card62:checked ~ label:not(:nth-of-type(10)):not(:nth-of-type(12)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card6:not(:checked) ~ #Card62:checked ~ #Card7:checked ~ #Card72:not(:checked) ~ label:not(:nth-of-type(11)):not(:nth-of-type(13)),
+#Card6:not(:checked) ~ #Card62:checked ~ #Card7:not(:checked) ~ #Card72:checked ~ label:not(:nth-of-type(11)):not(:nth-of-type(14)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card6:not(:checked) ~ #Card62:checked ~ #Card8:checked ~ #Card82:not(:checked) ~ label:not(:nth-of-type(11)):not(:nth-of-type(15)),
+#Card6:not(:checked) ~ #Card62:checked ~ #Card8:not(:checked) ~ #Card82:checked ~ label:not(:nth-of-type(11)):not(:nth-of-type(16)),
+
+
+/* --------------------------------------------------- Patron para #card-13 --------------------------------------------------- */
+
+
+#Card1:checked ~ #Card12:not(:checked) ~ #Card7:checked ~ #Card72:not(:checked) ~ label:not(:nth-of-type(1)):not(:nth-of-type(13)),
+#Card1:not(:checked) ~ #Card12:checked ~ #Card7:checked ~ #Card72:not(:checked) ~ label:not(:nth-of-type(2)):not(:nth-of-type(13)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card7:checked ~ #Card72:not(:checked) ~ label:not(:nth-of-type(3)):not(:nth-of-type(13)),
+#Card2:not(:checked) ~ #Card22:checked ~ #Card7:checked ~ #Card72:not(:checked) ~ label:not(:nth-of-type(4)):not(:nth-of-type(13)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:checked ~ #Card32:not(:checked) ~ #Card7:checked ~ #Card72:not(:checked) ~ label:not(:nth-of-type(5)):not(:nth-of-type(13)),
+#Card3:not(:checked) ~ #Card32:checked ~ #Card7:checked ~ #Card72:not(:checked) ~ label:not(:nth-of-type(6)):not(:nth-of-type(13)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card4:checked ~ #Card42:not(:checked) ~ #Card7:checked ~ #Card72:not(:checked) ~ label:not(:nth-of-type(7)):not(:nth-of-type(13)),
+#Card4:not(:checked) ~ #Card42:checked ~ #Card7:checked ~ #Card72:not(:checked) ~ label:not(:nth-of-type(8)):not(:nth-of-type(13)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card5:checked ~ #Card52:not(:checked) ~ #Card7:checked ~ #Card72:not(:checked) ~ label:not(:nth-of-type(9)):not(:nth-of-type(13)),
+#Card5:not(:checked) ~ #Card52:checked ~ #Card7:checked ~ #Card72:not(:checked) ~ label:not(:nth-of-type(10)):not(:nth-of-type(13)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card6:checked ~ #Card62:not(:checked) ~ #Card7:checked ~ #Card72:not(:checked) ~ label:not(:nth-of-type(11)):not(:nth-of-type(13)),
+#Card6:not(:checked) ~ #Card62:checked ~ #Card7:checked ~ #Card72:not(:checked) ~ label:not(:nth-of-type(12)):not(:nth-of-type(13)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card7:checked ~ #Card72:not(:checked) ~ #Card8:checked ~ #Card82:not(:checked) ~ label:not(:nth-of-type(13)):not(:nth-of-type(15)),
+#Card7:checked ~ #Card72:not(:checked) ~ #Card8:not(:checked) ~ #Card82:checked ~ label:not(:nth-of-type(13)):not(:nth-of-type(16)),
+
+
+/* --------------------------------------------------- Patron para #card-14 --------------------------------------------------- */
+
+
+#Card1:checked ~ #Card12:not(:checked) ~ #Card7:not(:checked) ~ #Card72:checked ~ label:not(:nth-of-type(1)):not(:nth-of-type(14)),
+#Card1:not(:checked) ~ #Card12:checked ~ #Card7:not(:checked) ~ #Card72:checked ~ label:not(:nth-of-type(2)):not(:nth-of-type(14)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card7:not(:checked) ~ #Card72:checked ~ label:not(:nth-of-type(3)):not(:nth-of-type(14)),
+#Card2:not(:checked) ~ #Card22:checked ~ #Card7:not(:checked) ~ #Card72:checked ~ label:not(:nth-of-type(4)):not(:nth-of-type(14)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:checked ~ #Card32:not(:checked) ~ #Card7:not(:checked) ~ #Card72:checked ~ label:not(:nth-of-type(5)):not(:nth-of-type(14)),
+#Card3:not(:checked) ~ #Card32:checked ~ #Card7:not(:checked) ~ #Card72:checked ~ label:not(:nth-of-type(6)):not(:nth-of-type(14)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card4:checked ~ #Card42:not(:checked) ~ #Card7:not(:checked) ~ #Card72:checked ~ label:not(:nth-of-type(7)):not(:nth-of-type(14)),
+#Card4:not(:checked) ~ #Card42:checked ~ #Card7:not(:checked) ~ #Card72:checked ~ label:not(:nth-of-type(8)):not(:nth-of-type(14)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card5:checked ~ #Card52:not(:checked) ~ #Card7:not(:checked) ~ #Card72:checked ~ label:not(:nth-of-type(9)):not(:nth-of-type(14)),
+#Card5:not(:checked) ~ #Card52:checked ~ #Card7:not(:checked) ~ #Card72:checked ~ label:not(:nth-of-type(10)):not(:nth-of-type(14)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card6:checked ~ #Card62:not(:checked) ~ #Card7:not(:checked) ~ #Card72:checked ~ label:not(:nth-of-type(11)):not(:nth-of-type(14)),
+#Card6:not(:checked) ~ #Card62:checked ~ #Card7:not(:checked) ~ #Card72:checked ~ label:not(:nth-of-type(12)):not(:nth-of-type(14)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card7:not(:checked) ~ #Card72:checked ~ #Card8:checked ~ #Card82:not(:checked) ~ label:not(:nth-of-type(14)):not(:nth-of-type(15)),
+#Card7:not(:checked) ~ #Card72:checked ~ #Card8:not(:checked) ~ #Card82:checked ~ label:not(:nth-of-type(14)):not(:nth-of-type(16)),
+
+
+/* --------------------------------------------------- Patron para #card-15 --------------------------------------------------- */
+
+
+#Card1:checked ~ #Card12:not(:checked) ~ #Card8:checked ~ #Card82:not(:checked) ~ label:not(:nth-of-type(1)):not(:nth-of-type(15)),
+#Card1:not(:checked) ~ #Card12:checked ~ #Card8:checked ~ #Card82:not(:checked) ~ label:not(:nth-of-type(2)):not(:nth-of-type(15)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card8:checked ~ #Card82:not(:checked) ~ label:not(:nth-of-type(3)):not(:nth-of-type(15)),
+#Card2:not(:checked) ~ #Card22:checked ~ #Card8:checked ~ #Card82:not(:checked) ~ label:not(:nth-of-type(4)):not(:nth-of-type(15)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:checked ~ #Card32:not(:checked) ~ #Card8:checked ~ #Card82:not(:checked) ~ label:not(:nth-of-type(5)):not(:nth-of-type(15)),
+#Card3:not(:checked) ~ #Card32:checked ~ #Card8:checked ~ #Card82:not(:checked) ~ label:not(:nth-of-type(6)):not(:nth-of-type(15)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card4:checked ~ #Card42:not(:checked) ~ #Card8:checked ~ #Card82:not(:checked) ~ label:not(:nth-of-type(7)):not(:nth-of-type(15)),
+#Card4:not(:checked) ~ #Card42:checked ~ #Card8:checked ~ #Card82:not(:checked) ~ label:not(:nth-of-type(8)):not(:nth-of-type(15)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card5:checked ~ #Card52:not(:checked) ~ #Card8:checked ~ #Card82:not(:checked) ~ label:not(:nth-of-type(9)):not(:nth-of-type(15)),
+#Card5:not(:checked) ~ #Card52:checked ~ #Card8:checked ~ #Card82:not(:checked) ~ label:not(:nth-of-type(10)):not(:nth-of-type(15)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card6:checked ~ #Card62:not(:checked) ~ #Card8:checked ~ #Card82:not(:checked) ~ label:not(:nth-of-type(11)):not(:nth-of-type(15)),
+#Card6:not(:checked) ~ #Card62:checked ~ #Card8:checked ~ #Card82:not(:checked) ~ label:not(:nth-of-type(12)):not(:nth-of-type(15)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card7:checked ~ #Card72:not(:checked) ~ #Card8:checked ~ #Card82:not(:checked) ~ label:not(:nth-of-type(13)):not(:nth-of-type(15)),
+#Card7:not(:checked) ~ #Card72:checked ~ #Card8:checked ~ #Card82:not(:checked) ~ label:not(:nth-of-type(14)):not(:nth-of-type(15)),
+
+
+/* --------------------------------------------------- Patron para #card-16 --------------------------------------------------- */
+
+
+#Card1:checked ~ #Card12:not(:checked) ~ #Card8:not(:checked) ~ #Card82:checked ~ label:not(:nth-of-type(1)):not(:nth-of-type(16)),
+#Card1:not(:checked) ~ #Card12:checked ~ #Card8:not(:checked) ~ #Card82:checked ~ label:not(:nth-of-type(2)):not(:nth-of-type(16)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card8:not(:checked) ~ #Card82:checked ~ label:not(:nth-of-type(3)):not(:nth-of-type(16)),
+#Card2:not(:checked) ~ #Card22:checked ~ #Card8:not(:checked) ~ #Card82:checked ~ label:not(:nth-of-type(4)):not(:nth-of-type(16)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:checked ~ #Card32:not(:checked) ~ #Card8:not(:checked) ~ #Card82:checked ~ label:not(:nth-of-type(5)):not(:nth-of-type(16)),
+#Card3:not(:checked) ~ #Card32:checked ~ #Card8:not(:checked) ~ #Card82:checked ~ label:not(:nth-of-type(6)):not(:nth-of-type(16)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card4:checked ~ #Card42:not(:checked) ~ #Card8:not(:checked) ~ #Card82:checked ~ label:not(:nth-of-type(7)):not(:nth-of-type(16)),
+#Card4:not(:checked) ~ #Card42:checked ~ #Card8:not(:checked) ~ #Card82:checked ~ label:not(:nth-of-type(8)):not(:nth-of-type(16)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card5:checked ~ #Card52:not(:checked) ~ #Card8:not(:checked) ~ #Card82:checked ~ label:not(:nth-of-type(9)):not(:nth-of-type(16)),
+#Card5:not(:checked) ~ #Card52:checked ~ #Card8:not(:checked) ~ #Card82:checked ~ label:not(:nth-of-type(10)):not(:nth-of-type(16)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card6:checked ~ #Card62:not(:checked) ~ #Card8:not(:checked) ~ #Card82:checked ~ label:not(:nth-of-type(11)):not(:nth-of-type(16)),
+#Card6:not(:checked) ~ #Card62:checked ~ #Card8:not(:checked) ~ #Card82:checked ~ label:not(:nth-of-type(12)):not(:nth-of-type(16)),
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card7:checked ~ #Card72:not(:checked) ~ #Card8:not(:checked) ~ #Card82:checked ~ label:not(:nth-of-type(13)):not(:nth-of-type(16)),
+#Card7:not(:checked) ~ #Card72:checked ~ #Card8:not(:checked) ~ #Card82:checked ~ label:not(:nth-of-type(14)):not(:nth-of-type(16)) {
+  pointer-events: none;
+}
+
+/* * ------------------------------------- mostrar alerta cuando dos no son iguales -------------------------------------- */
+/* --------------------------------------------------- Patron para #card-1 --------------------------------------------------- */
+#Card1:checked ~ #Card12:not(:checked) ~ #Card2:checked ~ #Card22:not(:checked) ~ .ContentAlerta,
+#Card1:checked ~ #Card12:not(:checked) ~ #Card2:not(:checked) ~ #Card22:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card1:checked ~ #Card12:not(:checked) ~ #Card3:checked ~ #Card32:not(:checked) ~ .ContentAlerta,
+#Card1:checked ~ #Card12:not(:checked) ~ #Card3:not(:checked) ~ #Card32:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card1:checked ~ #Card12:not(:checked) ~ #Card4:checked ~ #Card42:not(:checked) ~ .ContentAlerta,
+#Card1:checked ~ #Card12:not(:checked) ~ #Card4:not(:checked) ~ #Card42:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card1:checked ~ #Card12:not(:checked) ~ #Card5:checked ~ #Card52:not(:checked) ~ .ContentAlerta,
+#Card1:checked ~ #Card12:not(:checked) ~ #Card5:not(:checked) ~ #Card52:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card1:checked ~ #Card12:not(:checked) ~ #Card6:checked ~ #Card62:not(:checked) ~ .ContentAlerta,
+#Card1:checked ~ #Card12:not(:checked) ~ #Card6:not(:checked) ~ #Card62:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card1:checked ~ #Card12:not(:checked) ~ #Card7:checked ~ #Card72:not(:checked) ~ .ContentAlerta,
+#Card1:checked ~ #Card12:not(:checked) ~ #Card7:not(:checked) ~ #Card72:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card1:checked ~ #Card12:not(:checked) ~ #Card8:checked ~ #Card82:not(:checked) ~ .ContentAlerta,
+#Card1:checked ~ #Card12:not(:checked) ~ #Card8:not(:checked) ~ #Card82:checked ~ .ContentAlerta,
+
+
+/* --------------------------------------------------- Patron para #card-2 --------------------------------------------------- */
+
+
+#Card1:not(:checked) ~ #Card12:checked ~ #Card2:checked ~ #Card22:not(:checked) ~ .ContentAlerta,
+#Card1:not(:checked) ~ #Card12:checked ~ #Card2:not(:checked) ~ #Card22:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card1:not(:checked) ~ #Card12:checked ~ #Card3:checked ~ #Card32:not(:checked) ~ .ContentAlerta,
+#Card1:not(:checked) ~ #Card12:checked ~ #Card3:not(:checked) ~ #Card32:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card1:not(:checked) ~ #Card12:checked ~ #Card4:checked ~ #Card42:not(:checked) ~ .ContentAlerta,
+#Card1:not(:checked) ~ #Card12:checked ~ #Card4:not(:checked) ~ #Card42:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card1:not(:checked) ~ #Card12:checked ~ #Card5:checked ~ #Card52:not(:checked) ~ .ContentAlerta,
+#Card1:not(:checked) ~ #Card12:checked ~ #Card5:not(:checked) ~ #Card52:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card1:not(:checked) ~ #Card12:checked ~ #Card6:checked ~ #Card62:not(:checked) ~ .ContentAlerta,
+#Card1:not(:checked) ~ #Card12:checked ~ #Card6:not(:checked) ~ #Card62:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card1:not(:checked) ~ #Card12:checked ~ #Card7:checked ~ #Card72:not(:checked) ~ .ContentAlerta,
+#Card1:not(:checked) ~ #Card12:checked ~ #Card7:not(:checked) ~ #Card72:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card1:not(:checked) ~ #Card12:checked ~ #Card8:checked ~ #Card82:not(:checked) ~ .ContentAlerta,
+#Card1:not(:checked) ~ #Card12:checked ~ #Card8:not(:checked) ~ #Card82:checked ~ .ContentAlerta,
+
+
+/* --------------------------------------------------- Patron para #card-3 --------------------------------------------------- */
+
+
+#Card1:checked ~ #Card12:not(:checked) ~ #Card2:checked ~ #Card22:not(:checked) ~ .ContentAlerta,
+#Card1:not(:checked) ~ #Card12:checked ~ #Card2:checked ~ #Card22:not(:checked) ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card3:checked ~ #Card32:not(:checked) ~ .ContentAlerta,
+#Card2:checked ~ #Card22:not(:checked) ~ #Card3:not(:checked) ~ #Card32:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card4:checked ~ #Card42:not(:checked) ~ .ContentAlerta,
+#Card2:checked ~ #Card22:not(:checked) ~ #Card4:not(:checked) ~ #Card42:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card5:checked ~ #Card52:not(:checked) ~ .ContentAlerta,
+#Card2:checked ~ #Card22:not(:checked) ~ #Card5:not(:checked) ~ #Card52:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card6:checked ~ #Card62:not(:checked) ~ .ContentAlerta,
+#Card2:checked ~ #Card22:not(:checked) ~ #Card6:not(:checked) ~ #Card62:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card7:checked ~ #Card72:not(:checked) ~ .ContentAlerta,
+#Card2:checked ~ #Card22:not(:checked) ~ #Card7:not(:checked) ~ #Card72:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card8:checked ~ #Card82:not(:checked) ~ .ContentAlerta,
+#Card2:checked ~ #Card22:not(:checked) ~ #Card8:not(:checked) ~ #Card82:checked ~ .ContentAlerta,
+
+
+/* --------------------------------------------------- Patron para #card-4 --------------------------------------------------- */
+
+
+#Card1:checked ~ #Card12:not(:checked) ~ #Card2:not(:checked) ~ #Card22:checked ~ .ContentAlerta,
+#Card1:not(:checked) ~ #Card12:checked ~ #Card2:not(:checked) ~ #Card22:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:not(:checked) ~ #Card22:checked ~ #Card3:checked ~ #Card32:not(:checked) ~ .ContentAlerta,
+#Card2:not(:checked) ~ #Card22:checked ~ #Card3:not(:checked) ~ #Card32:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:not(:checked) ~ #Card22:checked ~ #Card4:checked ~ #Card42:not(:checked) ~ .ContentAlerta,
+#Card2:not(:checked) ~ #Card22:checked ~ #Card4:not(:checked) ~ #Card42:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:not(:checked) ~ #Card22:checked ~ #Card5:checked ~ #Card52:not(:checked) ~ .ContentAlerta,
+#Card2:not(:checked) ~ #Card22:checked ~ #Card5:not(:checked) ~ #Card52:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:not(:checked) ~ #Card22:checked ~ #Card6:checked ~ #Card62:not(:checked) ~ .ContentAlerta,
+#Card2:not(:checked) ~ #Card22:checked ~ #Card6:not(:checked) ~ #Card62:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:not(:checked) ~ #Card22:checked ~ #Card7:checked ~ #Card72:not(:checked) ~ .ContentAlerta,
+#Card2:not(:checked) ~ #Card22:checked ~ #Card7:not(:checked) ~ #Card72:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:not(:checked) ~ #Card22:checked ~ #Card8:checked ~ #Card82:not(:checked) ~ .ContentAlerta,
+#Card2:not(:checked) ~ #Card22:checked ~ #Card8:not(:checked) ~ #Card82:checked ~ .ContentAlerta,
+
+
+/* --------------------------------------------------- Patron para #card-5 --------------------------------------------------- */
+
+#Card1:checked ~ #Card12:not(:checked) ~ #Card3:checked ~ #Card32:not(:checked) ~ .ContentAlerta,
+#Card1:not(:checked) ~ #Card12:checked ~ #Card3:checked ~ #Card32:not(:checked) ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card3:checked ~ #Card32:not(:checked) ~ .ContentAlerta,
+#Card2:not(:checked) ~ #Card22:checked ~ #Card3:checked ~ #Card32:not(:checked) ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:checked ~ #Card32:not(:checked) ~ #Card4:checked ~ #Card42:not(:checked) ~ .ContentAlerta,
+#Card3:checked ~ #Card32:not(:checked) ~ #Card4:not(:checked) ~ #Card42:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:checked ~ #Card32:not(:checked) ~ #Card5:checked ~ #Card52:not(:checked) ~ .ContentAlerta,
+#Card3:checked ~ #Card32:not(:checked) ~ #Card5:not(:checked) ~ #Card52:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:checked ~ #Card32:not(:checked) ~ #Card6:checked ~ #Card62:not(:checked) ~ .ContentAlerta,
+#Card3:checked ~ #Card32:not(:checked) ~ #Card6:not(:checked) ~ #Card62:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:checked ~ #Card32:not(:checked) ~ #Card7:checked ~ #Card72:not(:checked) ~ .ContentAlerta,
+#Card3:checked ~ #Card32:not(:checked) ~ #Card7:not(:checked) ~ #Card72:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:checked ~ #Card32:not(:checked) ~ #Card8:checked ~ #Card82:not(:checked) ~ .ContentAlerta,
+#Card3:checked ~ #Card32:not(:checked) ~ #Card8:not(:checked) ~ #Card82:checked ~ .ContentAlerta,
+
+
+/* --------------------------------------------------- Patron para #card-6 --------------------------------------------------- */
+
+#Card1:checked ~ #Card12:not(:checked) ~ #Card3:not(:checked) ~ #Card32:checked ~ .ContentAlerta,
+#Card1:not(:checked) ~ #Card12:checked ~ #Card3:not(:checked) ~ #Card32:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card3:not(:checked) ~ #Card32:checked ~ .ContentAlerta,
+#Card2:not(:checked) ~ #Card22:checked ~ #Card3:not(:checked) ~ #Card32:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:not(:checked) ~ #Card32:checked ~ #Card4:checked ~ #Card42:not(:checked) ~ .ContentAlerta,
+#Card3:not(:checked) ~ #Card32:checked ~ #Card4:not(:checked) ~ #Card42:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:not(:checked) ~ #Card32:checked ~ #Card5:checked ~ #Card52:not(:checked) ~ .ContentAlerta,
+#Card3:not(:checked) ~ #Card32:checked ~ #Card5:not(:checked) ~ #Card52:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:not(:checked) ~ #Card32:checked ~ #Card6:checked ~ #Card62:not(:checked) ~ .ContentAlerta,
+#Card3:not(:checked) ~ #Card32:checked ~ #Card6:not(:checked) ~ #Card62:checked ~ .ContentAlerta,
+
+
+/* --------------------------------------------------- Patron para #card-7 --------------------------------------------------- */
+
+#Card1:checked ~ #Card12:not(:checked) ~ #Card4:checked ~ #Card42:not(:checked) ~ .ContentAlerta,
+#Card1:not(:checked) ~ #Card12:checked ~ #Card4:checked ~ #Card42:not(:checked) ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card4:checked ~ #Card42:not(:checked) ~ .ContentAlerta,
+#Card2:not(:checked) ~ #Card22:checked ~ #Card4:checked ~ #Card42:not(:checked) ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:not(:checked) ~ #Card32:checked ~ #Card4:checked ~ #Card42:not(:checked) ~ .ContentAlerta,
+#Card3:not(:checked) ~ #Card32:checked ~ #Card4:not(:checked) ~ #Card42:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card4:checked ~ #Card42:not(:checked) ~ #Card5:checked ~ #Card52:not(:checked) ~ .ContentAlerta,
+#Card4:checked ~ #Card42:not(:checked) ~ #Card5:not(:checked) ~ #Card52:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card4:checked ~ #Card42:not(:checked) ~ #Card6:checked ~ #Card62:not(:checked) ~ .ContentAlerta,
+#Card4:checked ~ #Card42:not(:checked) ~ #Card6:not(:checked) ~ #Card62:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card4:checked ~ #Card42:not(:checked) ~ #Card7:checked ~ #Card72:not(:checked) ~ .ContentAlerta,
+#Card4:checked ~ #Card42:not(:checked) ~ #Card7:not(:checked) ~ #Card72:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card4:checked ~ #Card42:not(:checked) ~ #Card8:checked ~ #Card82:not(:checked) ~ .ContentAlerta,
+#Card4:checked ~ #Card42:not(:checked) ~ #Card8:not(:checked) ~ #Card82:checked ~ .ContentAlerta,
+
+
+
+/* --------------------------------------------------- Patron para #card-8 --------------------------------------------------- */
+
+#Card1:checked ~ #Card12:not(:checked) ~ #Card4:not(:checked) ~ #Card42:checked ~ .ContentAlerta,
+#Card1:not(:checked) ~ #Card12:checked ~ #Card4:not(:checked) ~ #Card42:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card4:not(:checked) ~ #Card42:checked ~ .ContentAlerta,
+#Card2:not(:checked) ~ #Card22:checked ~ #Card4:not(:checked) ~ #Card42:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:checked ~ #Card32:not(:checked) ~ #Card4:not(:checked) ~ #Card42:checked ~ .ContentAlerta,
+#Card3:not(:checked) ~ #Card32:checked ~ #Card4:not(:checked) ~ #Card42:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card4:not(:checked) ~ #Card42:checked ~ #Card5:checked ~ #Card52:not(:checked) ~ .ContentAlerta,
+#Card4:not(:checked) ~ #Card42:checked ~ #Card5:not(:checked) ~ #Card52:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card4:not(:checked) ~ #Card42:checked ~ #Card6:checked ~ #Card62:not(:checked) ~ .ContentAlerta,
+#Card4:not(:checked) ~ #Card42:checked ~ #Card6:not(:checked) ~ #Card62:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card4:not(:checked) ~ #Card42:checked ~ #Card7:checked ~ #Card72:not(:checked) ~ .ContentAlerta,
+#Card4:not(:checked) ~ #Card42:checked ~ #Card7:not(:checked) ~ #Card72:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card4:not(:checked) ~ #Card42:checked ~ #Card8:checked ~ #Card82:not(:checked) ~ .ContentAlerta,
+#Card4:not(:checked) ~ #Card42:checked ~ #Card8:not(:checked) ~ #Card82:checked ~ .ContentAlerta,
+
+
+/* --------------------------------------------------- Patron para #card-9 --------------------------------------------------- */
+
+#Card1:checked ~ #Card12:not(:checked) ~ #Card5:checked ~ #Card52:not(:checked) ~ .ContentAlerta,
+#Card1:not(:checked) ~ #Card12:checked ~ #Card5:checked ~ #Card52:not(:checked) ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card5:checked ~ #Card52:not(:checked) ~ .ContentAlerta,
+#Card2:not(:checked) ~ #Card22:checked ~ #Card5:checked ~ #Card52:not(:checked) ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:checked ~ #Card32:not(:checked) ~ #Card5:checked ~ #Card52:not(:checked) ~ .ContentAlerta,
+#Card3:not(:checked) ~ #Card32:checked ~ #Card5:checked ~ #Card52:not(:checked) ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card4:checked ~ #Card42:not(:checked) ~ #Card5:checked ~ #Card52:not(:checked) ~ .ContentAlerta,
+#Card4:not(:checked) ~ #Card42:checked ~ #Card5:checked ~ #Card52:not(:checked) ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card5:checked ~ #Card52:not(:checked) ~ #Card6:checked ~ #Card62:not(:checked) ~ .ContentAlerta,
+#Card5:checked ~ #Card52:not(:checked) ~ #Card6:not(:checked) ~ #Card62:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card5:checked ~ #Card52:not(:checked) ~ #Card7:checked ~ #Card72:not(:checked) ~ .ContentAlerta,
+#Card5:checked ~ #Card52:not(:checked) ~ #Card7:not(:checked) ~ #Card72:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card5:checked ~ #Card52:not(:checked) ~ #Card8:checked ~ #Card82:not(:checked) ~ .ContentAlerta,
+#Card5:checked ~ #Card52:not(:checked) ~ #Card8:not(:checked) ~ #Card82:checked ~ .ContentAlerta,
+
+
+/* --------------------------------------------------- Patron para #card-10 --------------------------------------------------- */
+
+#Card1:checked ~ #Card12:not(:checked) ~ #Card5:not(:checked) ~ #Card52:checked ~ .ContentAlerta,
+#Card1:not(:checked) ~ #Card12:checked ~ #Card5:not(:checked) ~ #Card52:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card5:not(:checked) ~ #Card52:checked ~ .ContentAlerta,
+#Card2:not(:checked) ~ #Card22:checked ~ #Card5:not(:checked) ~ #Card52:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:checked ~ #Card32:not(:checked) ~ #Card5:not(:checked) ~ #Card52:checked ~ .ContentAlerta,
+#Card3:not(:checked) ~ #Card32:checked ~ #Card5:not(:checked) ~ #Card52:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card4:checked ~ #Card42:not(:checked) ~ #Card5:not(:checked) ~ #Card52:checked ~ .ContentAlerta,
+#Card4:not(:checked) ~ #Card42:checked ~ #Card5:not(:checked) ~ #Card52:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card5:not(:checked) ~ #Card52:checked ~ #Card6:checked ~ #Card62:not(:checked) ~ .ContentAlerta,
+#Card5:not(:checked) ~ #Card52:checked ~ #Card6:not(:checked) ~ #Card62:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card5:not(:checked) ~ #Card52:checked ~ #Card7:checked ~ #Card72:not(:checked) ~ .ContentAlerta,
+#Card5:not(:checked) ~ #Card52:checked ~ #Card7:not(:checked) ~ #Card72:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card5:not(:checked) ~ #Card52:checked ~ #Card8:checked ~ #Card82:not(:checked) ~ .ContentAlerta,
+#Card5:not(:checked) ~ #Card52:checked ~ #Card8:not(:checked) ~ #Card82:checked ~ .ContentAlerta,
+
+
+/* --------------------------------------------------- Patron para #card-11 --------------------------------------------------- */
+
+#Card1:checked ~ #Card12:not(:checked) ~ #Card6:checked ~ #Card62:not(:checked) ~ .ContentAlerta,
+#Card1:not(:checked) ~ #Card12:checked ~ #Card6:checked ~ #Card62:not(:checked) ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card6:checked ~ #Card62:not(:checked) ~ .ContentAlerta,
+#Card2:not(:checked) ~ #Card22:checked ~ #Card6:checked ~ #Card62:not(:checked) ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:checked ~ #Card32:not(:checked) ~ #Card6:checked ~ #Card62:not(:checked) ~ .ContentAlerta,
+#Card3:not(:checked) ~ #Card32:checked ~ #Card6:checked ~ #Card62:not(:checked) ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card4:checked ~ #Card42:not(:checked) ~ #Card6:checked ~ #Card62:not(:checked) ~ .ContentAlerta,
+#Card4:not(:checked) ~ #Card42:checked ~ #Card6:checked ~ #Card62:not(:checked) ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card5:checked ~ #Card52:not(:checked) ~ #Card6:checked ~ #Card62:not(:checked) ~ .ContentAlerta,
+#Card5:not(:checked) ~ #Card52:checked ~ #Card6:checked ~ #Card62:not(:checked) ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card6:checked ~ #Card62:not(:checked) ~ #Card7:checked ~ #Card72:not(:checked) ~ .ContentAlerta,
+#Card6:checked ~ #Card62:not(:checked) ~ #Card7:not(:checked) ~ #Card72:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card6:checked ~ #Card62:not(:checked) ~ #Card8:checked ~ #Card82:not(:checked) ~ .ContentAlerta,
+#Card6:checked ~ #Card62:not(:checked) ~ #Card8:not(:checked) ~ #Card82:checked ~ .ContentAlerta,
+
+
+
+/* --------------------------------------------------- Patron para #card-12 --------------------------------------------------- */
+
+#Card1:checked ~ #Card12:not(:checked) ~ #Card6:not(:checked) ~ #Card62:checked ~ .ContentAlerta,
+#Card1:not(:checked) ~ #Card12:checked ~ #Card6:not(:checked) ~ #Card62:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card6:not(:checked) ~ #Card62:checked ~ .ContentAlerta,
+#Card2:not(:checked) ~ #Card22:checked ~ #Card6:not(:checked) ~ #Card62:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:checked ~ #Card32:not(:checked) ~ #Card6:not(:checked) ~ #Card62:checked ~ .ContentAlerta,
+#Card3:not(:checked) ~ #Card32:checked ~ #Card6:not(:checked) ~ #Card62:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card4:checked ~ #Card42:not(:checked) ~ #Card6:not(:checked) ~ #Card62:checked ~ .ContentAlerta,
+#Card4:not(:checked) ~ #Card42:checked ~ #Card6:not(:checked) ~ #Card62:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card5:checked ~ #Card52:not(:checked) ~ #Card6:not(:checked) ~ #Card62:checked ~ .ContentAlerta,
+#Card5:not(:checked) ~ #Card52:checked ~ #Card6:not(:checked) ~ #Card62:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card6:not(:checked) ~ #Card62:checked ~ #Card7:checked ~ #Card72:not(:checked) ~ .ContentAlerta,
+#Card6:not(:checked) ~ #Card62:checked ~ #Card7:not(:checked) ~ #Card72:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card6:not(:checked) ~ #Card62:checked ~ #Card8:checked ~ #Card82:not(:checked) ~ .ContentAlerta,
+#Card6:not(:checked) ~ #Card62:checked ~ #Card8:not(:checked) ~ #Card82:checked ~ .ContentAlerta,
+
+
+/* --------------------------------------------------- Patron para #card-13 --------------------------------------------------- */
+
+#Card1:checked ~ #Card12:not(:checked) ~ #Card7:checked ~ #Card72:not(:checked) ~ .ContentAlerta,
+#Card1:not(:checked) ~ #Card12:checked ~ #Card7:checked ~ #Card72:not(:checked) ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card7:checked ~ #Card72:not(:checked) ~ .ContentAlerta,
+#Card2:not(:checked) ~ #Card22:checked ~ #Card7:checked ~ #Card72:not(:checked) ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:checked ~ #Card32:not(:checked) ~ #Card7:checked ~ #Card72:not(:checked) ~ .ContentAlerta,
+#Card3:not(:checked) ~ #Card32:checked ~ #Card7:checked ~ #Card72:not(:checked) ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card4:checked ~ #Card42:not(:checked) ~ #Card7:checked ~ #Card72:not(:checked) ~ .ContentAlerta,
+#Card4:not(:checked) ~ #Card42:checked ~ #Card7:checked ~ #Card72:not(:checked) ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card5:checked ~ #Card52:not(:checked) ~ #Card7:checked ~ #Card72:not(:checked) ~ .ContentAlerta,
+#Card5:not(:checked) ~ #Card52:checked ~ #Card7:checked ~ #Card72:not(:checked) ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card6:checked ~ #Card62:not(:checked) ~ #Card7:checked ~ #Card72:not(:checked) ~ .ContentAlerta,
+#Card6:not(:checked) ~ #Card62:checked ~ #Card7:checked ~ #Card72:not(:checked) ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card7:checked ~ #Card72:not(:checked) ~ #Card8:checked ~ #Card82:not(:checked) ~ .ContentAlerta,
+#Card7:checked ~ #Card72:not(:checked) ~ #Card8:not(:checked) ~ #Card82:checked ~ .ContentAlerta,
+
+
+/* --------------------------------------------------- Patron para #card-14 --------------------------------------------------- */
+
+#Card1:checked ~ #Card12:not(:checked) ~ #Card7:not(:checked) ~ #Card72:checked ~ .ContentAlerta,
+#Card1:not(:checked) ~ #Card12:checked ~ #Card7:not(:checked) ~ #Card72:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card7:not(:checked) ~ #Card72:checked ~ .ContentAlerta,
+#Card2:not(:checked) ~ #Card22:checked ~ #Card7:not(:checked) ~ #Card72:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:checked ~ #Card32:not(:checked) ~ #Card7:not(:checked) ~ #Card72:checked ~ .ContentAlerta,
+#Card3:not(:checked) ~ #Card32:checked ~ #Card7:not(:checked) ~ #Card72:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card4:checked ~ #Card42:not(:checked) ~ #Card7:not(:checked) ~ #Card72:checked ~ .ContentAlerta,
+#Card4:not(:checked) ~ #Card42:checked ~ #Card7:not(:checked) ~ #Card72:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card5:checked ~ #Card52:not(:checked) ~ #Card7:not(:checked) ~ #Card72:checked ~ .ContentAlerta,
+#Card5:not(:checked) ~ #Card52:checked ~ #Card7:not(:checked) ~ #Card72:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card6:checked ~ #Card62:not(:checked) ~ #Card7:not(:checked) ~ #Card72:checked ~ .ContentAlerta,
+#Card6:not(:checked) ~ #Card62:checked ~ #Card7:not(:checked) ~ #Card72:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card7:not(:checked) ~ #Card72:checked ~ #Card8:checked ~ #Card82:not(:checked) ~ .ContentAlerta,
+#Card7:not(:checked) ~ #Card72:checked ~ #Card8:not(:checked) ~ #Card82:checked ~ .ContentAlerta,
+
+
+
+/* --------------------------------------------------- Patron para #card-15 --------------------------------------------------- */
+
+#Card1:checked ~ #Card12:not(:checked) ~ #Card8:checked ~ #Card82:not(:checked) ~ .ContentAlerta,
+#Card1:not(:checked) ~ #Card12:checked ~ #Card8:checked ~ #Card82:not(:checked) ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card8:checked ~ #Card82:not(:checked) ~ .ContentAlerta,
+#Card2:not(:checked) ~ #Card22:checked ~ #Card8:checked ~ #Card82:not(:checked) ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:checked ~ #Card32:not(:checked) ~ #Card8:checked ~ #Card82:not(:checked) ~ .ContentAlerta,
+#Card3:not(:checked) ~ #Card32:checked ~ #Card8:checked ~ #Card82:not(:checked) ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card4:checked ~ #Card42:not(:checked) ~ #Card8:checked ~ #Card82:not(:checked) ~ .ContentAlerta,
+#Card4:not(:checked) ~ #Card42:checked ~ #Card8:checked ~ #Card82:not(:checked) ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card5:checked ~ #Card52:not(:checked) ~ #Card8:checked ~ #Card82:not(:checked) ~ .ContentAlerta,
+#Card5:not(:checked) ~ #Card52:checked ~ #Card8:checked ~ #Card82:not(:checked) ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card6:checked ~ #Card62:not(:checked) ~ #Card8:checked ~ #Card82:not(:checked) ~ .ContentAlerta,
+#Card6:not(:checked) ~ #Card62:checked ~ #Card8:checked ~ #Card82:not(:checked) ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card7:checked ~ #Card72:not(:checked) ~ #Card8:checked ~ #Card82:not(:checked) ~ .ContentAlerta,
+#Card7:not(:checked) ~ #Card72:checked ~ #Card8:checked ~ #Card82:not(:checked) ~ .ContentAlerta,
+
+
+/* --------------------------------------------------- Patron para #card-16 --------------------------------------------------- */
+
+#Card1:checked ~ #Card12:not(:checked) ~ #Card8:not(:checked) ~ #Card82:checked ~ .ContentAlerta,
+#Card1:not(:checked) ~ #Card12:checked ~ #Card8:not(:checked) ~ #Card82:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card2:checked ~ #Card22:not(:checked) ~ #Card8:not(:checked) ~ #Card82:checked ~ .ContentAlerta,
+#Card2:not(:checked) ~ #Card22:checked ~ #Card8:not(:checked) ~ #Card82:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card3:checked ~ #Card32:not(:checked) ~ #Card8:not(:checked) ~ #Card82:checked ~ .ContentAlerta,
+#Card3:not(:checked) ~ #Card32:checked ~ #Card8:not(:checked) ~ #Card82:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card4:checked ~ #Card42:not(:checked) ~ #Card8:not(:checked) ~ #Card82:checked ~ .ContentAlerta,
+#Card4:not(:checked) ~ #Card42:checked ~ #Card8:not(:checked) ~ #Card82:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card5:checked ~ #Card52:not(:checked) ~ #Card8:not(:checked) ~ #Card82:checked ~ .ContentAlerta,
+#Card5:not(:checked) ~ #Card52:checked ~ #Card8:not(:checked) ~ #Card82:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card6:checked ~ #Card62:not(:checked) ~ #Card8:not(:checked) ~ #Card82:checked ~ .ContentAlerta,
+#Card6:not(:checked) ~ #Card62:checked ~ #Card8:not(:checked) ~ #Card82:checked ~ .ContentAlerta,
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#Card7:checked ~ #Card72:not(:checked) ~ #Card8:not(:checked) ~ #Card82:checked ~ .ContentAlerta,
+#Card7:not(:checked) ~ #Card72:checked ~ #Card8:not(:checked) ~ #Card82:checked ~ .ContentAlerta,
+#Card7:not(:checked) ~ #Card72:checked ~ #Card8:not(:checked) ~ #Card82:checked ~ .ContentAlerta {
+  display: flex;
 }
